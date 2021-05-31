@@ -1,0 +1,19 @@
+//directory /etc/conf
+
+zone "harry.spot.edu" {
+        type master;
+        file "/etc/bind/zones/for.harry.spot.edu";
+        allow-transfer { 10.10.10.4; };
+};
+
+zone "10.10.10.in-addr.arpa" {
+        type master;
+        file "/etc/bind/zones/rev.harry.spot.edu";
+        allow-transfer { 10.10.10.4; };
+};
+
+zone "example.com" {
+        type master;
+        file "/etc/bind/zones/example.com.zone";
+        allow-transfer { 10.10.10.4; };
+};
