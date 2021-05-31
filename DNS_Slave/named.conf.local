@@ -1,0 +1,32 @@
+//directory /etc/bind
+
+zone "attacker32.com" {
+        type forward;
+        forwarders {
+                10.10.10.20;
+        };
+};
+
+zone "example.com" {
+        type forward;
+        forwarders {
+                10.10.10.2;
+        };
+
+};
+
+zone "harry.spot.edu" {
+        type forward;  
+        forwarders { 
+                10.10.10.2;
+        };
+
+};
+
+zone "10.10.10.in-addr.arpa" {
+        type forward;
+        forwarders { 
+                10.10.10.2;
+        };
+
+};
